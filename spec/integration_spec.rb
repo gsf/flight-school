@@ -35,7 +35,7 @@ RSpec.describe "The FlightSchool application" do
   it "returns a 404 if the airport cannot be found" do
     get "/airports/EDI"
     expect(last_response).to be_not_found
-    expect(last_response.body).to include("Couldn't find that airport!")
+    expect(last_response.body).to include("Cannot find that airport!")
   end
 
   it "has a JSON API" do
